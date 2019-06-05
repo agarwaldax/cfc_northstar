@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A970E7A22A8464D00A39E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E7922A8464D00A39E6A /* AppDelegate.swift */; };
+		6A970E7C22A8464D00A39E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E7B22A8464D00A39E6A /* ViewController.swift */; };
+		6A970E7F22A8464D00A39E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A970E7D22A8464D00A39E6A /* Main.storyboard */; };
+		6A970E8122A8464E00A39E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A970E8022A8464E00A39E6A /* Assets.xcassets */; };
+		6A970E8422A8464E00A39E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A970E8222A8464E00A39E6A /* LaunchScreen.storyboard */; };
+		6A970E8F22A8464E00A39E6A /* NorthstarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E8E22A8464E00A39E6A /* NorthstarTests.swift */; };
+		6A970E9A22A8464E00A39E6A /* NorthstarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E9922A8464E00A39E6A /* NorthstarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A970E8B22A8464E00A39E6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A970E6E22A8464D00A39E6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A970E7522A8464D00A39E6A;
+			remoteInfo = Northstar;
+		};
+		6A970E9622A8464E00A39E6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A970E6E22A8464D00A39E6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A970E7522A8464D00A39E6A;
+			remoteInfo = Northstar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A970E7622A8464D00A39E6A /* Northstar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Northstar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A970E7922A8464D00A39E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A970E7B22A8464D00A39E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A970E7E22A8464D00A39E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A970E8022A8464E00A39E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A970E8322A8464E00A39E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A970E8522A8464E00A39E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A970E8A22A8464E00A39E6A /* NorthstarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthstarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A970E8E22A8464E00A39E6A /* NorthstarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorthstarTests.swift; sourceTree = "<group>"; };
+		6A970E9022A8464E00A39E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A970E9522A8464E00A39E6A /* NorthstarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthstarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A970E9922A8464E00A39E6A /* NorthstarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorthstarUITests.swift; sourceTree = "<group>"; };
+		6A970E9B22A8464E00A39E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A970E7322A8464D00A39E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A970E8722A8464E00A39E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A970E9222A8464E00A39E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A970E6D22A8464D00A39E6A = {
+			isa = PBXGroup;
+			children = (
+				6A970E7822A8464D00A39E6A /* Northstar */,
+				6A970E8D22A8464E00A39E6A /* NorthstarTests */,
+				6A970E9822A8464E00A39E6A /* NorthstarUITests */,
+				6A970E7722A8464D00A39E6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A970E7722A8464D00A39E6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A970E7622A8464D00A39E6A /* Northstar.app */,
+				6A970E8A22A8464E00A39E6A /* NorthstarTests.xctest */,
+				6A970E9522A8464E00A39E6A /* NorthstarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A970E7822A8464D00A39E6A /* Northstar */ = {
+			isa = PBXGroup;
+			children = (
+				6A970E7922A8464D00A39E6A /* AppDelegate.swift */,
+				6A970E7B22A8464D00A39E6A /* ViewController.swift */,
+				6A970E7D22A8464D00A39E6A /* Main.storyboard */,
+				6A970E8022A8464E00A39E6A /* Assets.xcassets */,
+				6A970E8222A8464E00A39E6A /* LaunchScreen.storyboard */,
+				6A970E8522A8464E00A39E6A /* Info.plist */,
+			);
+			path = Northstar;
+			sourceTree = "<group>";
+		};
+		6A970E8D22A8464E00A39E6A /* NorthstarTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A970E8E22A8464E00A39E6A /* NorthstarTests.swift */,
+				6A970E9022A8464E00A39E6A /* Info.plist */,
+			);
+			path = NorthstarTests;
+			sourceTree = "<group>";
+		};
+		6A970E9822A8464E00A39E6A /* NorthstarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6A970E9922A8464E00A39E6A /* NorthstarUITests.swift */,
+				6A970E9B22A8464E00A39E6A /* Info.plist */,
+			);
+			path = NorthstarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A970E7522A8464D00A39E6A /* Northstar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A970E9E22A8464E00A39E6A /* Build configuration list for PBXNativeTarget "Northstar" */;
+			buildPhases = (
+				6A970E7222A8464D00A39E6A /* Sources */,
+				6A970E7322A8464D00A39E6A /* Frameworks */,
+				6A970E7422A8464D00A39E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Northstar;
+			productName = Northstar;
+			productReference = 6A970E7622A8464D00A39E6A /* Northstar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A970E8922A8464E00A39E6A /* NorthstarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A970EA122A8464E00A39E6A /* Build configuration list for PBXNativeTarget "NorthstarTests" */;
+			buildPhases = (
+				6A970E8622A8464E00A39E6A /* Sources */,
+				6A970E8722A8464E00A39E6A /* Frameworks */,
+				6A970E8822A8464E00A39E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A970E8C22A8464E00A39E6A /* PBXTargetDependency */,
+			);
+			name = NorthstarTests;
+			productName = NorthstarTests;
+			productReference = 6A970E8A22A8464E00A39E6A /* NorthstarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6A970E9422A8464E00A39E6A /* NorthstarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A970EA422A8464E00A39E6A /* Build configuration list for PBXNativeTarget "NorthstarUITests" */;
+			buildPhases = (
+				6A970E9122A8464E00A39E6A /* Sources */,
+				6A970E9222A8464E00A39E6A /* Frameworks */,
+				6A970E9322A8464E00A39E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A970E9722A8464E00A39E6A /* PBXTargetDependency */,
+			);
+			name = NorthstarUITests;
+			productName = NorthstarUITests;
+			productReference = 6A970E9522A8464E00A39E6A /* NorthstarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A970E6E22A8464D00A39E6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					6A970E7522A8464D00A39E6A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					6A970E8922A8464E00A39E6A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6A970E7522A8464D00A39E6A;
+					};
+					6A970E9422A8464E00A39E6A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6A970E7522A8464D00A39E6A;
+					};
+				};
+			};
+			buildConfigurationList = 6A970E7122A8464D00A39E6A /* Build configuration list for PBXProject "Northstar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A970E6D22A8464D00A39E6A;
+			productRefGroup = 6A970E7722A8464D00A39E6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A970E7522A8464D00A39E6A /* Northstar */,
+				6A970E8922A8464E00A39E6A /* NorthstarTests */,
+				6A970E9422A8464E00A39E6A /* NorthstarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A970E7422A8464D00A39E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A970E8422A8464E00A39E6A /* LaunchScreen.storyboard in Resources */,
+				6A970E8122A8464E00A39E6A /* Assets.xcassets in Resources */,
+				6A970E7F22A8464D00A39E6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A970E8822A8464E00A39E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A970E9322A8464E00A39E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A970E7222A8464D00A39E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A970E7C22A8464D00A39E6A /* ViewController.swift in Sources */,
+				6A970E7A22A8464D00A39E6A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A970E8622A8464E00A39E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A970E8F22A8464E00A39E6A /* NorthstarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A970E9122A8464E00A39E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A970E9A22A8464E00A39E6A /* NorthstarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A970E8C22A8464E00A39E6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A970E7522A8464D00A39E6A /* Northstar */;
+			targetProxy = 6A970E8B22A8464E00A39E6A /* PBXContainerItemProxy */;
+		};
+		6A970E9722A8464E00A39E6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A970E7522A8464D00A39E6A /* Northstar */;
+			targetProxy = 6A970E9622A8464E00A39E6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A970E7D22A8464D00A39E6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A970E7E22A8464D00A39E6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6A970E8222A8464E00A39E6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A970E8322A8464E00A39E6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A970E9C22A8464E00A39E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A970E9D22A8464E00A39E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A970E9F22A8464E00A39E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Northstar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.northstar.Northstar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A970EA022A8464E00A39E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Northstar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.northstar.Northstar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A970EA222A8464E00A39E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NorthstarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.northstar.NorthstarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Northstar.app/Northstar";
+			};
+			name = Debug;
+		};
+		6A970EA322A8464E00A39E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NorthstarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.northstar.NorthstarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Northstar.app/Northstar";
+			};
+			name = Release;
+		};
+		6A970EA522A8464E00A39E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NorthstarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.northstar.NorthstarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Northstar;
+			};
+			name = Debug;
+		};
+		6A970EA622A8464E00A39E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NorthstarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.northstar.NorthstarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Northstar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A970E7122A8464D00A39E6A /* Build configuration list for PBXProject "Northstar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A970E9C22A8464E00A39E6A /* Debug */,
+				6A970E9D22A8464E00A39E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A970E9E22A8464E00A39E6A /* Build configuration list for PBXNativeTarget "Northstar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A970E9F22A8464E00A39E6A /* Debug */,
+				6A970EA022A8464E00A39E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A970EA122A8464E00A39E6A /* Build configuration list for PBXNativeTarget "NorthstarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A970EA222A8464E00A39E6A /* Debug */,
+				6A970EA322A8464E00A39E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A970EA422A8464E00A39E6A /* Build configuration list for PBXNativeTarget "NorthstarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A970EA522A8464E00A39E6A /* Debug */,
+				6A970EA622A8464E00A39E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A970E6E22A8464D00A39E6A /* Project object */;
+}
