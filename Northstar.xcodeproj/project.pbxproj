@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A62209609F4E7353CBC4EB3 /* Pods_Northstar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0FDFA361B57A28D5B6345C /* Pods_Northstar.framework */; };
 		6A970E7A22A8464D00A39E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E7922A8464D00A39E6A /* AppDelegate.swift */; };
 		6A970E7C22A8464D00A39E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E7B22A8464D00A39E6A /* ViewController.swift */; };
 		6A970E7F22A8464D00A39E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A970E7D22A8464D00A39E6A /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D462C492BE6904070F0B34E /* Pods-Northstar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Northstar.release.xcconfig"; path = "Target Support Files/Pods-Northstar/Pods-Northstar.release.xcconfig"; sourceTree = "<group>"; };
+		2D0FDFA361B57A28D5B6345C /* Pods_Northstar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Northstar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A970E7622A8464D00A39E6A /* Northstar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Northstar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A970E7922A8464D00A39E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A970E7B22A8464D00A39E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		6A970E9522A8464E00A39E6A /* NorthstarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthstarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A970E9922A8464E00A39E6A /* NorthstarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorthstarUITests.swift; sourceTree = "<group>"; };
 		6A970E9B22A8464E00A39E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4658CB810EBFC51B06ABF63 /* Pods-Northstar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Northstar.debug.xcconfig"; path = "Target Support Files/Pods-Northstar/Pods-Northstar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A62209609F4E7353CBC4EB3 /* Pods_Northstar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0AFF88CAA92134919C3CFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4658CB810EBFC51B06ABF63 /* Pods-Northstar.debug.xcconfig */,
+				0D462C492BE6904070F0B34E /* Pods-Northstar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6A970E6D22A8464D00A39E6A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				6A970E8D22A8464E00A39E6A /* NorthstarTests */,
 				6A970E9822A8464E00A39E6A /* NorthstarUITests */,
 				6A970E7722A8464D00A39E6A /* Products */,
+				0B0AFF88CAA92134919C3CFC /* Pods */,
+				F2F42303A068B647CCE7D2D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = NorthstarUITests;
 			sourceTree = "<group>";
 		};
+		F2F42303A068B647CCE7D2D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D0FDFA361B57A28D5B6345C /* Pods_Northstar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A970E9E22A8464E00A39E6A /* Build configuration list for PBXNativeTarget "Northstar" */;
 			buildPhases = (
+				E675874F33E0369E18AC55BA /* [CP] Check Pods Manifest.lock */,
 				6A970E7222A8464D00A39E6A /* Sources */,
 				6A970E7322A8464D00A39E6A /* Frameworks */,
 				6A970E7422A8464D00A39E6A /* Resources */,
+				357337C789AF86E99C04397C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +218,11 @@
 				TargetAttributes = {
 					6A970E7522A8464D00A39E6A = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					6A970E8922A8464E00A39E6A = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -249,6 +280,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		357337C789AF86E99C04397C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Northstar/Pods-Northstar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Northstar/Pods-Northstar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Northstar/Pods-Northstar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E675874F33E0369E18AC55BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Northstar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A970E7222A8464D00A39E6A /* Sources */ = {
@@ -429,6 +502,7 @@
 		};
 		6A970E9F22A8464E00A39E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4658CB810EBFC51B06ABF63 /* Pods-Northstar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +520,7 @@
 		};
 		6A970EA022A8464E00A39E6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D462C492BE6904070F0B34E /* Pods-Northstar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
