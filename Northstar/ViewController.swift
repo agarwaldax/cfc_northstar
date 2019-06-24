@@ -29,21 +29,41 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
         
-        
-        // Get all nearby fire stations and annotate them on the map (NOT COMPLETED)
-//        let point = sender.location(in: mapView)
-//        let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
-//        let annotation = MGLPointAnnotation()
-//        annotation.coordinate = coordinate
-//        annotation.title = "Start navigation"
-//        mapView.addAnnotation(annotation)
-        
         // Add a gesture recognizer to the map view
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
         mapView.addGestureRecognizer(longPress)
         
 //        navigateButton.addTarget(self, action: #selector(navigateButtonWasPressed(_:)), for: .touchUpInside)
     }
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
+        // Plot 10 random saftey zones
+        for i in 1...10 {
+            let annotation = MGLPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: 37.220818 + Double.random(in: 0.01...0.03), longitude: -121.782621 + Double.random(in: 0.005...0.03))
+            annotation.title = "Safe Zone " + String(i)
+            mapView.addAnnotation(annotation)
+            calculateRoute(from: (mapView.userLocation!.coordinate), to: annotation.coordinate) { (route, error) in
+                if error != nil {
+                    print("Error calculating route")
+                }
+            }
+        }
+        
+        // Plot 10 random pg&e towers
+        for _ in 1...10 {
+            let annotation = MGLPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: 37.220818 + Double.random(in: -0.01...0.03), longitude: -121.782621 + Double.random(in: -0.005...0.03))
+            annotation.title = "(Fire Risk) Power"
+            mapView.addAnnotation(annotation)
+            annotation
+        }
+    }
+    
+    func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        return MGLAnnotationImage(image: UIImage(named: "powervector")!, reuseIdentifier: "power");
+    }
+
     
     @objc func didLongPress(_ sender: UILongPressGestureRecognizer) {
         guard sender.state == .began else { return }
