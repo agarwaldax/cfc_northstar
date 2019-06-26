@@ -1,4 +1,24 @@
 PODS:
+  - BoringSSL (10.0.6):
+    - BoringSSL/Implementation (= 10.0.6)
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL-GRPC (0.0.3):
+    - BoringSSL-GRPC/Implementation (= 0.0.3)
+    - BoringSSL-GRPC/Interface (= 0.0.3)
+  - BoringSSL-GRPC/Implementation (0.0.3):
+    - BoringSSL-GRPC/Interface (= 0.0.3)
+  - BoringSSL-GRPC/Interface (0.0.3)
+  - BoringSSL/Implementation (10.0.6):
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Interface (10.0.6)
+  - gRPC-Core (1.19.0):
+    - gRPC-Core/Implementation (= 1.19.0)
+    - gRPC-Core/Interface (= 1.19.0)
+  - gRPC-Core/Implementation (1.19.0):
+    - BoringSSL-GRPC (= 0.0.3)
+    - gRPC-Core/Interface (= 1.19.0)
+    - nanopb (~> 0.3)
+  - gRPC-Core/Interface (1.19.0)
   - Mapbox-iOS-SDK (5.0.0)
   - MapboxCoreNavigation (0.34.0):
     - MapboxDirections.swift (~> 0.28.0)
@@ -16,17 +36,31 @@ PODS:
     - Solar (~> 2.1)
   - MapboxNavigationNative (6.2.1)
   - MapboxSpeech (0.1.1)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - Polyline (4.2.1)
   - Solar (2.1.0)
+  - SwiftGRPC (0.9.0):
+    - BoringSSL (~> 10.0)
+    - gRPC-Core (~> 1.19.0)
+    - SwiftProtobuf (~> 1.5.0)
+  - SwiftProtobuf (1.5.0)
   - Turf (0.3.0)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 5.0)
   - MapboxGeocoder.swift (~> 0.11)
   - MapboxNavigation (~> 0.34.0)
+  - SwiftGRPC
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BoringSSL
+    - BoringSSL-GRPC
+    - gRPC-Core
     - Mapbox-iOS-SDK
     - MapboxCoreNavigation
     - MapboxDirections.swift
@@ -35,11 +69,17 @@ SPEC REPOS:
     - MapboxNavigation
     - MapboxNavigationNative
     - MapboxSpeech
+    - nanopb
     - Polyline
     - Solar
+    - SwiftGRPC
+    - SwiftProtobuf
     - Turf
 
 SPEC CHECKSUMS:
+  BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
+  BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  gRPC-Core: bd9472c8daa2e414b9f8038ba667bf56ce0e02b8
   Mapbox-iOS-SDK: 018266d830ecb6e57d913494c280383b47981590
   MapboxCoreNavigation: 6163a863738994237bd9eff28ebc303f28661994
   MapboxDirections.swift: bec8771badfbdd55a0194649a4194b2c2cb15b96
@@ -48,10 +88,13 @@ SPEC CHECKSUMS:
   MapboxNavigation: 4eee9aaaf19d584ee234242c57ac6644db32a76e
   MapboxNavigationNative: 11dc22140f4698d3f26989f2b6379dc81ef0d4c1
   MapboxSpeech: 59b3984d3f433a443d24acf53097f918c5cc70f9
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Polyline: 0e9890790292741c8186201a536b6bb6a78d02dd
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  SwiftGRPC: 25c008ae77c849ab292c138bfe4dbf57a9ad866e
+  SwiftProtobuf: 241400280f912735c1e1b9fe675fdd2c6c4d42e2
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 3744698bc954f076a9a22211c3359cb7a40e2b27
+PODFILE CHECKSUM: 4b313e94ad5750ac242cdda315a610b90149fcf1
 
 COCOAPODS: 1.7.0
