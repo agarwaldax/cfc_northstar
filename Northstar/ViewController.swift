@@ -10,6 +10,13 @@ import Mapbox
 import MapboxCoreNavigation
 import MapboxNavigation
 import MapboxDirections
+import MapboxGeocoder
+
+// MGLPointAnnotation subclass
+class PGETowerAnnotation: MGLPointAnnotation {
+}
+// end MGLPointAnnotation subclass
+
 
 class ViewController: UIViewController, MGLMapViewDelegate {
     //MARK: Properties
@@ -41,7 +48,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         for i in 1...10 {
             let annotation = MGLPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: 37.220818 + Double.random(in: 0.01...0.03), longitude: -121.782621 + Double.random(in: 0.005...0.03))
-            annotation.title = "Safe Zone " + String(i)
+            annotation.title = "Navigate to Safe Zone " + String(i)
             mapView.addAnnotation(annotation)
             calculateRoute(from: (mapView.userLocation!.coordinate), to: annotation.coordinate) { (route, error) in
                 if error != nil {
@@ -50,18 +57,20 @@ class ViewController: UIViewController, MGLMapViewDelegate {
             }
         }
         
-        // Plot 10 random pg&e towers
-        for _ in 1...10 {
-            let annotation = MGLPointAnnotation()
+        // Plot 5 random pg&e towers
+        for _ in 1...5 {
+            let annotation = PGETowerAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: 37.220818 + Double.random(in: -0.01...0.03), longitude: -121.782621 + Double.random(in: -0.005...0.03))
             annotation.title = "(Fire Risk) Power"
             mapView.addAnnotation(annotation)
-            annotation
         }
     }
     
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
-        return MGLAnnotationImage(image: UIImage(named: "powervector")!, reuseIdentifier: "power");
+        if let _ = annotation as? PGETowerAnnotation {
+            return MGLAnnotationImage(image: UIImage(named: "powervector")!, reuseIdentifier: "power")
+        }
+        return nil
     }
 
     
@@ -84,6 +93,8 @@ class ViewController: UIViewController, MGLMapViewDelegate {
                 print("Error calculating route")
             }
         }
+        
+        self.showDestination(coordinate: coordinate)
     }
     
     // Calculate route to be used for navigation
@@ -104,6 +115,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
             // Draw the route on the map after creating it
             self.drawRoute(route: self.directionsRoute!)
         }
+        
     }
     
     func drawRoute(route: Route) {
@@ -138,6 +150,28 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
         let navigationViewController = NavigationViewController(for: directionsRoute!)
         self.present(navigationViewController, animated: true, completion: nil)
+    }
+    
+    func showDestination(coordinate: CLLocationCoordinate2D) {
+        // main.swift
+        let options = ReverseGeocodeOptions(coordinate: coordinate)
+        // Or perhaps: ReverseGeocodeOptions(location: locationManager.location)
+        
+        let _ = Geocoder.shared.geocode(options) { (placemarks, attribution, error) in
+            guard let placemark = placemarks?.first else {
+                return
+            }
+            print(placemark.imageName ?? "")
+            // telephone
+            print(placemark.genres?.joined(separator: ", ") ?? "")
+            // computer, electronic
+            print(placemark.administrativeRegion?.name ?? "")
+            // New York
+            print(placemark.administrativeRegion?.code ?? "")
+            // US-NY
+            print(placemark.place?.wikidataItemIdentifier ?? "")
+            // Q60
+        }
     }
 }
 
