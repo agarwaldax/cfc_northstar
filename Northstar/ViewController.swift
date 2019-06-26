@@ -24,7 +24,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     //MARK: Properties
     var mapView: NavigationMapView!
     var directionsRoute: Route?
-    var client: gRPC?
+    var client: NorthstarCloud_NorthStarServiceServiceClient?
     @IBOutlet weak var navigateButton: UIButton!
     
 
@@ -44,7 +44,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.addGestureRecognizer(longPress)
         
         // Load the GRPC Client
-//        client = NoteServiceServiceClient.init(address: "127.0.0.1:50051", secure: false)
+        client = NorthstarCloud_NorthStarServiceServiceClient.init(address: "127.0.0.1:50051", secure: false)
         
 //        navigateButton.addTarget(self, action: #selector(navigateButtonWasPressed(_:)), for: .touchUpInside)
     }
