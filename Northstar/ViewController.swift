@@ -11,6 +11,8 @@ import MapboxCoreNavigation
 import MapboxNavigation
 import MapboxDirections
 import MapboxGeocoder
+import SwiftGRPC
+
 
 // MGLPointAnnotation subclass
 class PGETowerAnnotation: MGLPointAnnotation {
@@ -22,6 +24,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     //MARK: Properties
     var mapView: NavigationMapView!
     var directionsRoute: Route?
+    var client: gRPC?
     @IBOutlet weak var navigateButton: UIButton!
     
 
@@ -39,6 +42,9 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         // Add a gesture recognizer to the map view
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
         mapView.addGestureRecognizer(longPress)
+        
+        // Load the GRPC Client
+//        client = NoteServiceServiceClient.init(address: "127.0.0.1:50051", secure: false)
         
 //        navigateButton.addTarget(self, action: #selector(navigateButtonWasPressed(_:)), for: .touchUpInside)
     }
@@ -161,16 +167,12 @@ class ViewController: UIViewController, MGLMapViewDelegate {
             guard let placemark = placemarks?.first else {
                 return
             }
-            print(placemark.imageName ?? "")
-            // telephone
-            print(placemark.genres?.joined(separator: ", ") ?? "")
-            // computer, electronic
-            print(placemark.administrativeRegion?.name ?? "")
-            // New York
-            print(placemark.administrativeRegion?.code ?? "")
-            // US-NY
-            print(placemark.place?.wikidataItemIdentifier ?? "")
-            // Q60
+            print(placemark.address ?? "")
+            print(placemark.postalAddress?.street ?? "")
+            print(placemark.postalAddress?.city ?? "")
+            print(placemark.postalAddress?.state ?? "")
+            print(placemark.postalAddress?.postalCode ?? "")
+            print("")
         }
     }
 }

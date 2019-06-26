@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Northstar/ViewController.swift"
-            timestampString = "583204111.12788"
+            timestampString = "583206095.852959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "calculateRoute(from:to:completion:)"
             landmarkType = "7">
             <Locations>
