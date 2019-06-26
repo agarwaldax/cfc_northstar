@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "calculateRoute(from:to:completion:)"
+            landmarkName = "didLongPress(_:)"
             landmarkType = "7">
             <Locations>
                <Location

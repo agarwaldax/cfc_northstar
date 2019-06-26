@@ -44,7 +44,10 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.addGestureRecognizer(longPress)
         
         // Load the GRPC Client
-        client = NorthstarCloud_NorthStarServiceServiceClient.init(address: "127.0.0.1:50051", secure: false)
+//        client = NorthstarCloud_NorthStarServiceServiceClient.init(address: "localhost:50051", secure: false)
+//        var request = NorthstarCloud_GetImageRequest()
+//        let response = try client?.getImage(request)
+//        print(response)
         
 //        navigateButton.addTarget(self, action: #selector(navigateButtonWasPressed(_:)), for: .touchUpInside)
     }
