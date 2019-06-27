@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4A62209609F4E7353CBC4EB3 /* Pods_Northstar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0FDFA361B57A28D5B6345C /* Pods_Northstar.framework */; };
 		6A0F201222C2FE08001CFC5E /* northstar.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F201122C2FE08001CFC5E /* northstar.pb.swift */; };
-		6A0F201422C3073C001CFC5E /* northstar.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F201322C3073C001CFC5E /* northstar.grpc.swift */; };
 		6A970E7A22A8464D00A39E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E7922A8464D00A39E6A /* AppDelegate.swift */; };
 		6A970E7C22A8464D00A39E6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E7B22A8464D00A39E6A /* ViewController.swift */; };
 		6A970E7F22A8464D00A39E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A970E7D22A8464D00A39E6A /* Main.storyboard */; };
@@ -17,6 +16,7 @@
 		6A970E8422A8464E00A39E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A970E8222A8464E00A39E6A /* LaunchScreen.storyboard */; };
 		6A970E8F22A8464E00A39E6A /* NorthstarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E8E22A8464E00A39E6A /* NorthstarTests.swift */; };
 		6A970E9A22A8464E00A39E6A /* NorthstarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A970E9922A8464E00A39E6A /* NorthstarUITests.swift */; };
+		6AE1C7BD22C3EA9300F17338 /* northstar.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1C7BC22C3EA9300F17338 /* northstar.grpc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		0D462C492BE6904070F0B34E /* Pods-Northstar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Northstar.release.xcconfig"; path = "Target Support Files/Pods-Northstar/Pods-Northstar.release.xcconfig"; sourceTree = "<group>"; };
 		2D0FDFA361B57A28D5B6345C /* Pods_Northstar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Northstar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0F201122C2FE08001CFC5E /* northstar.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = northstar.pb.swift; sourceTree = "<group>"; };
-		6A0F201322C3073C001CFC5E /* northstar.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = northstar.grpc.swift; path = ../../../../Downloads/northstar.grpc.swift; sourceTree = "<group>"; };
 		6A970E7622A8464D00A39E6A /* Northstar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Northstar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A970E7922A8464D00A39E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A970E7B22A8464D00A39E6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		6A970E9522A8464E00A39E6A /* NorthstarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorthstarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A970E9922A8464E00A39E6A /* NorthstarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NorthstarUITests.swift; sourceTree = "<group>"; };
 		6A970E9B22A8464E00A39E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AE1C7BC22C3EA9300F17338 /* northstar.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = northstar.grpc.swift; sourceTree = "<group>"; };
 		C4658CB810EBFC51B06ABF63 /* Pods-Northstar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Northstar.debug.xcconfig"; path = "Target Support Files/Pods-Northstar/Pods-Northstar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +124,7 @@
 				6A970E8222A8464E00A39E6A /* LaunchScreen.storyboard */,
 				6A970E8522A8464E00A39E6A /* Info.plist */,
 				6A0F201122C2FE08001CFC5E /* northstar.pb.swift */,
-				6A0F201322C3073C001CFC5E /* northstar.grpc.swift */,
+				6AE1C7BC22C3EA9300F17338 /* northstar.grpc.swift */,
 			);
 			path = Northstar;
 			sourceTree = "<group>";
@@ -336,7 +336,7 @@
 			files = (
 				6A0F201222C2FE08001CFC5E /* northstar.pb.swift in Sources */,
 				6A970E7C22A8464D00A39E6A /* ViewController.swift in Sources */,
-				6A0F201422C3073C001CFC5E /* northstar.grpc.swift in Sources */,
+				6AE1C7BD22C3EA9300F17338 /* northstar.grpc.swift in Sources */,
 				6A970E7A22A8464D00A39E6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
