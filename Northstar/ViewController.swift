@@ -25,14 +25,20 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     var mapView: NavigationMapView!
     var directionsRoute: Route?
     var client: NorthstarCloud_NorthStarServiceServiceClient?
-    @IBOutlet weak var navigateButton: UIButton!
+    @IBOutlet weak var navInfo: UIView!
+    @IBOutlet weak var addressBox: UILabel!
+    @IBOutlet weak var addressBoxMin: UILabel!
+    @IBOutlet weak var navButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView = NavigationMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(mapView)
+        view.insertSubview(mapView, belowSubview: navInfo)
+        
+        //Style Nav Info UI View
+        self.navInfo.layer.cornerRadius = 10
         
         mapView.delegate = self
         
@@ -44,16 +50,35 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.addGestureRecognizer(longPress)
         
         // Load the GRPC Client
-//        client = NorthstarCloud_NorthStarServiceServiceClient.init(address: "localhost:50051", secure: false)
-//        var request = NorthstarCloud_GetImageRequest()
-//        let response = try client?.getImage(request)
-//        print(response)
+        self.client = NorthstarCloud_NorthStarServiceServiceClient.init(address: "localhost:50051", secure: false)
+        var requestImage = NorthstarCloud_GetImageRequest()
+        requestImage.imageName = "fire_burned.jpg"
+        requestImage.imageID = "1861cf56-69a5-41e6-8e2b-476d854fcbc7"
+        _ = try? self.client?.getImage(requestImage) {NorthstarCloud_GetImageReply, callResult in print(callResult)}
+        print("\n Hitesh")
         
 //        navigateButton.addTarget(self, action: #selector(navigateButtonWasPressed(_:)), for: .touchUpInside)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        let alert = UIAlertController(title: "Evacuate Immediately", message: "A wildfire is approaching your location.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Start Navigation", style: .default, handler: {(UIAlertAction) in
+            let navigationViewController = NavigationViewController(for: self.directionsRoute!)
+            self.present(navigationViewController, animated: true, completion: nil)
+        }))
+        
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { timer in
+            self.present(alert, animated: true)
+        }
+        
+    }
+    
+    
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         // Plot 10 random saftey zones
+        var lastCoord: CLLocationCoordinate2D?
         for i in 1...10 {
             let annotation = MGLPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: 37.220818 + Double.random(in: 0.01...0.03), longitude: -121.782621 + Double.random(in: 0.005...0.03))
@@ -64,6 +89,12 @@ class ViewController: UIViewController, MGLMapViewDelegate {
                     print("Error calculating route")
                 }
             }
+            lastCoord = annotation.coordinate
+        }
+        
+        // Show last route
+        if let coord = lastCoord {
+            self.showDestination(coordinate: coord)
         }
         
         // Plot 5 random pg&e towers
@@ -161,6 +192,11 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self.present(navigationViewController, animated: true, completion: nil)
     }
     
+    @IBAction func navigateZone(_ sender: Any) {
+        let navigationViewController = NavigationViewController(for: directionsRoute!)
+        self.present(navigationViewController, animated: true, completion: nil)
+    }
+    
     func showDestination(coordinate: CLLocationCoordinate2D) {
         // main.swift
         let options = ReverseGeocodeOptions(coordinate: coordinate)
@@ -170,13 +206,19 @@ class ViewController: UIViewController, MGLMapViewDelegate {
             guard let placemark = placemarks?.first else {
                 return
             }
-            print(placemark.address ?? "")
+            print(placemark.addressDictionary ?? "")
             print(placemark.postalAddress?.street ?? "")
             print(placemark.postalAddress?.city ?? "")
             print(placemark.postalAddress?.state ?? "")
             print(placemark.postalAddress?.postalCode ?? "")
             print("")
+            print(placemark.formattedName)
+            
+            self.addressBox.text = placemark.formattedName
+            if let address = placemark.postalAddress {
+                self.addressBoxMin.text = address.city + ", " + address.state + " " + address.postalCode
+            }
+            
         }
     }
 }
-

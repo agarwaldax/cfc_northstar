@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Northstar/ViewController.swift"
-            timestampString = "583206095.852959"
+            timestampString = "583469625.658605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "didLongPress(_:)"
             landmarkType = "7">
             <Locations>
