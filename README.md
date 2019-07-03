@@ -18,3 +18,11 @@ The app makes internal calls to the backend, but due to the effort required to s
 6. Build and run the app
 
 If you run into issues please email daxit.agarwal@ibm.com
+
+## Screenshots
+
+![Alt text](/Screenshots/current_location.png?raw=true "Current Location")
+![Alt text](/Screenshots/wildfire_alert.png?raw=true "Wildfire Alert")
+![Alt text](/Screenshots/safe_zone_nav.png?raw=true "Safe Zone Navigation")
+![Alt text](/Screenshots/explore_safe_zones.png?raw=true "Safe Zone Exploration")
+
