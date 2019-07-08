@@ -1,11 +1,11 @@
 # Call For Code 2019 - Northstar Front End
 ## About 
-This is the front end iOS app for the Northstar project. It communicates with the backend ML model to predict wildfires, send alerts and route users to safe locations. In its current state, the app demonstrates the following functionality:
+This is the front end iOS app for the Northstar project. It communicates with the backend Northstar cloud to predict wildfires, send alerts and route users to safe locations. In its current state, the app demonstrates the following functionality:
 - alerts for wildfire danger and directions to safety
 - exploration of and navigation to safe zones near your location
 - exploration of potential fire hazards near your location
 
-The app makes internal calls to the backend, but due to the effort required to setup a local server, the functionality has been disabled for this demo. Instead, backend calls are mimicked in the front end.
+The app makes internal calls to the backend. Our current integration allows recieving an image of the wildfire using the GRPC protocol. Due to the effort required to setup a local server, the integration has been disabled for this demo. Instead, backend calls are mimicked in the front end. There are also other integrations that are yet to be implemented.
 
 ## Requirements
 - Mac OS Mojave (v10.14.5) 
