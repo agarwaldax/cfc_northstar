@@ -18,7 +18,7 @@ The app makes internal calls to the backend. Our current integration allows reci
 `$ sudo gem install cocoapods`
 4. Run Cocoapods to create or update the XCode Workspace file in the repository
 `$ pod repo update && pod install`
-5. Open the resulting XCode **Workspace** file which will launch the XCode App (you might have to install the XCode App from the App store)
+5. Open the resulting XCode **Workspace** file which will launch the XCode App 
 6. Build and run the app, an iOS emulator should pop up
 ![Alt text](/Screenshots/build_run.png?raw=true "Build Location")
 7. In the iOS emulator, go to the Debug menu. Select Location > Custom Location ... and enter the following:  
