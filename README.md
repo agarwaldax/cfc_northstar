@@ -7,15 +7,20 @@ This is the front end iOS app for the Northstar project. It communicates with th
 
 The app makes internal calls to the backend, but due to the effort required to setup a local server, the functionality has been disabled for this demo. Instead, backend calls are mimicked in the front end.
 
-## Setting up the app (Mac OS Only)
-1. Clone the repository
+## Requirements
+- Mac OS Mojave (v10.14.5) 
+- XCode App (v10.2.1)
+
+## Setting up the app
+1. Clone this repository
 2. Navigate to the repository in your terminal
 3. Install Cocoapods
 `$ sudo gem install cocoapods`
-4. Run Cocoapods 
+4. Run Cocoapods to create or update the XCode Workspace file in the repository
 `$ pod repo update && pod install`
-5. Open the XCode **Workspace**
+5. Open the resulting XCode **Workspace** file which will launch the XCode App
 6. Build and run the app
+![Alt text](/Screenshots/build_run.png?raw=true "Build Location")
 
 If you run into issues please email daxit.agarwal@ibm.com
 
