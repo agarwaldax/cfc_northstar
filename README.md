@@ -21,7 +21,7 @@ The app makes internal calls to the backend. Our current integration allows reci
 5. Open the resulting XCode **Workspace** file which will launch the XCode App
 6. Build and run the app, an iOS emulator should pop up
 ![Alt text](/Screenshots/build_run.png?raw=true "Build Location")
-7. In the iOS emulator, go to the Debug menu. Select Loctaion > Custom Location ... and enter the following:  
+7. In the iOS emulator, go to the Debug menu. Select Location > Custom Location ... and enter the following:  
   **Latitude:** 37.220818  
   **Longitude:** -121.782621
 
